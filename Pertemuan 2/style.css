@@ -1,0 +1,308 @@
+/*biar inget*/
+/*ngatur dasar web*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4fa;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*u header dan footer web*/
+header {
+    background-color: white;
+    padding: 10px 7%;
+}
+
+/*posisi menu navigasi*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*Warna judul pada navigasi*/
+nav h2 {
+    color: palevioletred;
+}
+
+/*daftar menu navigasi*/
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+}
+
+/*tampilan link navigasi*/
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/*ubah warna menu ketika kursor diarahkan*/
+nav a:hover {
+    color: magenta;
+}
+
+/*Konten Utama*/
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/*atur tampilan kotak setiap bagian website*/
+section {
+    background-color: white;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 10px;
+    scroll-margin-top: 15px;
+}
+
+/*warna judul hal dan bagian*/
+h1, section h2 {
+    color: palevioletred;
+}
+
+/*buat foto profil dan teks portofolio*/
+/*atur foto di kiri dan teks di kanan*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 35px;
+}
+
+/*ngatur tampilan foto profil menjadi lingkaran*/
+.hero img {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    /*border buat foto profil*/
+    border: 5px solid pink;
+
+    /*dikasih shadow lembut dipinggi border*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    /*border pas ke foto*/
+    box-sizing: border-box;
+}
+
+/*ngatur bagian teks di samping foto*/
+.hero div {
+    flex: 1;
+    min-width: 0;
+}
+
+/*buat kotak-kotak dibagian portofolio saya*/
+/*ngatur kumpulan kartu agar berjajar*/
+.kartu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/*ngatur tampilan masing-masing kartu*/
+.kartu {
+    flex: 1 1 180px;
+    background-color: #ffd9ee;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/*footer wbsite*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+/*Buat tampilan website di HP*/
+@media (max-width: 600px) {
+
+    /*Mengatur jarak header pada layar HP*/
+    header {
+        padding: 10px 20px;
+    }
+
+    /*menu navigasi susunanya secara vertikal*/
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /*Foto berada di atas teks pada layar HP*/
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /*menyesuaikan ukuran foto profil di HP */
+    .hero img {
+        width: 160px;
+        height: 160px;
+        max-width: 160px;
+    }
+}
+
+/*Halaman Tentang Saya */
+
+/*Mengatur kotak utama halaman tentang saya*/
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/*navigasi hal tentang saya*/
+.container nav {
+    display: block;
+    margin-bottom: 25px;
+}
+
+/*ngatur posisi menu pada halaman tentang saya*/
+.container nav ul {
+    justify-content: flex-start;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/*Menghilangkan jarak tambahan pada item menu*/
+.container nav ul li {
+    margin: 2;
+}
+
+/*Mengatur ukuran tulisan menu*/
+.container nav a {
+    font-size: 14px;
+}
+
+/*bagian daftar hobi*/
+/*ngatur jarak daftar hobi*/
+.container ol {
+    padding-left: 25px;
+}
+
+/*ngatur jarak setiap item hobi */
+.container ol li {
+    margin-bottom: 15px;
+}
+
+/*ngatur gambar di hobi*/
+.hobi-img {
+    display: block;
+    width: 40%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/*tabel musik ama film*/
+/*ngatur ukuran dan garis tabel*/
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 25px;
+    background-color: white;
+    font-size: 14px;
+}
+
+/*ngatur garis dan jarak isi tabel*/
+.container th,
+.container td {
+    border: 1px solid #ead6e6;
+    padding: 10px;
+    text-align: left;
+}
+
+/*ngatur warna judul kolom tabel*/
+.container th {
+    background-color: #f8eaf2;
+    color: #333;
+}
+
+/*Memberikan warna berbeda pada baris tabel genap*/
+.container tr:nth-child(even) {
+    background-color: #fff8fc;
+}
+
+/*footer halaman, hobi saya saat di klik*/
+.container footer {
+    margin-top: 30px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*ngatur video*/
+/*ukuran video agar tidak keluar dari kotak*/
+.container video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/*tampilan buat di HP*/
+@media (max-width: 600px) {
+
+    /*Menyesuaikan ukuran kotak halaman*/
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /*Mengecilkan judul pada layar HP*/
+    .container h1 {
+        font-size: 25px;
+    }
+
+    /*Mengatur jarak menu navigasi di HP*/
+    .container nav ul {
+        gap: 15px;
+    }
+
+    /*Gambar hobi menyesuaikan lebar layar*/
+    .hobi-img {
+        max-width: 60%;
+    }
+
+    /*Mengecilkan tulisan tabel agar muat di HP*/
+    .container table {
+        font-size: 11px;
+    }
+
+    /*Menyesuaikan isi sel tabel*/
+    .container th,
+    .container td {
+        padding: 6px;
+        overflow-wrap: anywhere;
+    }
+
+    /*Memastikan video tidak keluar dari kotak*/
+    .container video {
+        width: 100%;
+    }
+}
